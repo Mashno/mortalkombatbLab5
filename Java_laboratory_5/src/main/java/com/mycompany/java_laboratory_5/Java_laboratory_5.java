@@ -4,6 +4,11 @@
 
 package com.mycompany.java_laboratory_5;
 
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
+
+
 /**
  *
  * @author Владислав
@@ -11,6 +16,14 @@ package com.mycompany.java_laboratory_5;
 public class Java_laboratory_5 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        try {
+        System.setOut(new PrintStream(System.out, true, "UTF-8"));
+        System.setErr(new PrintStream(System.err, true, "UTF-8"));
+        JFrames app = new JFrames();
+        app.setVisible(true);
+    } catch (UnsupportedEncodingException e) {
+        e.printStackTrace();
+    }
     }
 }
