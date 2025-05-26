@@ -23,7 +23,7 @@ public class Heal extends FightAction {
     public void realisation(Fighter fighter1, Fighter fighter2, String fighter2ActionType) {
         switch (fighter2ActionType) {
             case "Hit" -> {
-                if ("Lord Islam Maximov".equals(fighter1.getName())) {
+                if ("Усач".equals(fighter1.getName())) {
                     // Босс получает двойной урон при атаке игрока во время регенерации
                     int doubleDamage = fighter2.getDamage() * 2;
                     fighter1.setHealth(fighter1.getHealth() - doubleDamage);
@@ -35,7 +35,7 @@ public class Heal extends FightAction {
             }
 
             case "Block" -> {
-                if ("Lord Islam Maximov".equals(fighter1.getName())) {
+                if ("Усач".equals(fighter1.getName())) {
                     // Босс восстанавливает 50% от недостающего здоровья
                     int missingHealth = fighter1.getMaxHealth() - fighter1.getHealth();
                     fighter1.setHealth(fighter1.getHealth() + missingHealth / 2);

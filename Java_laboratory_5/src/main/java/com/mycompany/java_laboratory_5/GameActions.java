@@ -64,18 +64,18 @@ public class GameActions {
     public void levelUp(Player player, Enemy[] enemies) {
         player.setLevel(player.getLevel() + 1);
 
-        // Вычитаем опыт, нужный для предыдущего уровня
+        
         int usedExperience = player.getNextLevelExperience();
         player.setExperience(player.getExperience() - usedExperience);
 
-        // Обновляем следующий порог
+        
         int i = 0;
         while (usedExperience >= experience_for_next_level[i]) {
             i++;
         }
         player.setNextLevelExperience(experience_for_next_level[i]);
 
-        // Улучшаем врагов
+        
         for (int j = 0; j < 5; j++) {
             newHealthEnemy(enemies[j], player);
         }
@@ -169,28 +169,28 @@ public class GameActions {
             switch (enemy.getName()) {
                 case "Sub-Zero" -> {
                     enemy.setLevel(1);
-                    enemy.setDamage(16);
-                    enemy.setMaxHealth(60);
+                    enemy.setDamage(18);
+                    enemy.setMaxHealth(70);
                 }
                 case "Sonya Blade" -> {
                     enemy.setLevel(1);
-                    enemy.setDamage(16);
-                    enemy.setMaxHealth(80);
+                    enemy.setDamage(18);
+                    enemy.setMaxHealth(90);
                 }
-                case "Lord Islam Maximov" -> {
+                case "Усач" -> {
                     enemy.setLevel(1);
                     enemy.setDamage(30);
-                    enemy.setMaxHealth(100);
+                    enemy.setMaxHealth(120);
                 }
                 case "Liu Kang" -> {
                     enemy.setLevel(1);
-                    enemy.setDamage(20);
-                    enemy.setMaxHealth(70);
+                    enemy.setDamage(22);
+                    enemy.setMaxHealth(80);
                 }
                 case "Baraka" -> {
                     enemy.setLevel(1);
-                    enemy.setDamage(12);
-                    enemy.setMaxHealth(100);
+                    enemy.setDamage(13);
+                    enemy.setMaxHealth(120);
                 }
             }
         }

@@ -30,11 +30,11 @@ public class Game {
     private final Enemy enemies[] = new Enemy[5];
 
     public void setEnemies() {
-        enemies[0] = new Enemy("Baraka", 1, 100, 12, EnemyType.TANK);
-        enemies[1] = new Enemy("Sub-Zero", 1, 60, 16, EnemyType.MAGE);
-        enemies[2] = new Enemy("Liu Kang", 1, 70, 20, EnemyType.FIGHTER);
-        enemies[3] = new Enemy("Sonya Blade", 1, 80, 16, EnemyType.SOLDIER);
-        enemies[4] = new Enemy("Lord Islam Maximov", 3, 100, 30, EnemyType.BOSS);
+        enemies[0] = new Enemy("Baraka", 1, 120, 13, EnemyType.TANK);
+        enemies[1] = new Enemy("Sub-Zero", 1, 70, 18, EnemyType.MAGE);
+        enemies[2] = new Enemy("Liu Kang", 1, 80, 22, EnemyType.FIGHTER);
+        enemies[3] = new Enemy("Sonya Blade", 1, 90, 18, EnemyType.SOLDIER);
+        enemies[4] = new Enemy("Усач", 3, 120, 30, EnemyType.BOSS);
     }
 
     public Enemy[] getEnemies() {
@@ -42,7 +42,7 @@ public class Game {
     }
 
     public Player newPlayer(Mediator mediator, Item[] items) {
-        Player player = new Player(0, 800, 16);
+        Player player = new Player(0, 150, 20);
         mediator.setHealthBar(player);
         mediator.setPlayerMaxHealthBar(player);
         player.setItems(items);

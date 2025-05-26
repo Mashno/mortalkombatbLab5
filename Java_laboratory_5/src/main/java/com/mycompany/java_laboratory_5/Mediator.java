@@ -209,10 +209,10 @@ public class Mediator {
     }
     public void setGIF(boolean a){
         if (a){
-            GIFLabel.setIcon(new ImageIcon("HappyNekit.jpg"));
+            GIFLabel.setIcon(new ImageIcon("Победа.jpg"));
         }
         else{
-            GIFLabel.setIcon(new ImageIcon("SadNekit.jpg"));
+            GIFLabel.setIcon(new ImageIcon("поражение.jpg"));
         }
     }
     
@@ -226,7 +226,6 @@ public class Mediator {
     
     public void setWeakenedLabel(Fighter fighter, boolean isActive) {
         if (isActive) {
-            // Например: отображение иконки или текста над бойцом
             System.out.println(fighter.getName() + " is weakened!");
         } else {
             System.out.println(fighter.getName() + " no longer weakened.");

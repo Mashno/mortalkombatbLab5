@@ -80,7 +80,7 @@ public class Location {
                 }
             }
 
-            // 📈 Увеличение характеристик на +20% за каждую локацию (начиная со 2-й)
+            //Увеличение характеристик на +20% за каждую локацию (начиная со 2-й)
             double scaleMultiplier = 1 + 0.2 * (locationNumber - 1);
             int scaledHealth = (int) (baseHealth * scaleMultiplier);
             int scaledDamage = (int) (baseDamage * scaleMultiplier);
@@ -122,7 +122,7 @@ public class Location {
             enemy = fullEnemiesList[4]; // Boss
             enemy.setIcon("SecretBoss.jpg");
 
-            // 🛡 Усиление характеристик босса в зависимости от локации
+            //Усиление характеристик босса в зависимости от локации
             double healthMultiplier = 1 + 0.2 * (currentLocation - 1);
             double damageMultiplier = 1 + 0.15 * (currentLocation - 1);
 
