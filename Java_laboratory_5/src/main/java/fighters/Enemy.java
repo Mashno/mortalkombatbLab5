@@ -4,7 +4,7 @@
  */
 package fighters;
 
-import lab5.EnemyType;
+import com.mycompany.java_laboratory_5.EnemyType;
 
 public class Enemy extends Fighter{
 

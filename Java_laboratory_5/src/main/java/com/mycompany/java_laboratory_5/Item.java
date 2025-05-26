@@ -6,29 +6,31 @@ package com.mycompany.java_laboratory_5;
 
 /**
  *
- * @author Мария
+ * @author Владислав
  */
-public class Items {
-    
+public class Item {
+
     private String name;
     private int count;
-    
-    public Items(String n, int c){
-        this.name=n;
-        this.count=c;
+
+    public Item(String n, int c) {
+        this.name = n;
+        this.count = c;
     }
-    
-    public void setName(String s){
-        this.name=s;
+
+    public void setName(String s) {
+        this.name = s;
     }
-    public void setCount(int c){
-        this.count+=c;
+
+    public void setCount(int c) {
+        this.count += c;
     }
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    public int getCount(){
+
+    public int getCount() {
         return this.count;
     }
 }

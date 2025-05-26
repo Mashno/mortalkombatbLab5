@@ -20,10 +20,11 @@ public class Java_laboratory_5 {
         try {
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
         System.setErr(new PrintStream(System.err, true, "UTF-8"));
-        JFrames app = new JFrames();
-        app.setVisible(true);
+        GUI gui = new GUI();
+        gui.setVisible(true);
     } catch (UnsupportedEncodingException e) {
         e.printStackTrace();
     }
     }
-}
+    }
+

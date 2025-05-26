@@ -4,7 +4,7 @@
  */
 package fighters;
 
-import lab5.Item;
+import com.mycompany.java_laboratory_5.Item;
 
 public class Player extends Fighter {
     
