@@ -24,8 +24,8 @@ public class Debuff extends FightAction {
         switch (fighter2ActionType) {
             case "Hit" -> {
                 // Дебафф срывается, атакующий наносит +15% урона
-                int bonusDamage = (int) (fighter1.getDamage() * 1.15);
-                fighter2.setHealth(fighter2.getHealth() - bonusDamage);
+                int bonusDamage = (int) (fighter2.getDamage() * 1.15);
+                fighter1.setHealth(fighter1.getHealth() - bonusDamage);
             }
 
             case "Block" -> {

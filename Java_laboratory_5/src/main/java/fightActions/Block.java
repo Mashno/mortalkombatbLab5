@@ -28,11 +28,7 @@ public class Block extends FightAction {
             }
 
             case "Block" -> {
-                // только при защита-защита: шанс оглушения второго
-                if (Math.random() < 0.5) {
-                    fighter2.setStunned(true); // только второй может быть оглушён
-                }
-                // урон не наносится
+                
             }
 
             case "Debuff" -> {
