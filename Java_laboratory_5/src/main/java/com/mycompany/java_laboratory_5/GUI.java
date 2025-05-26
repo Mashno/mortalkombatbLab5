@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 public class GUI extends javax.swing.JFrame {
 
@@ -1208,7 +1209,31 @@ public class GUI extends javax.swing.JFrame {
 
     private void startWithLocationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startWithLocationsButtonActionPerformed
         setLocationsFrame.setVisible(false);
-        locationsNumber = Integer.parseInt(setLocationsField.getText());
+        String locationsText = setLocationsField.getText();
+        int locationsNumber;
+
+        try {
+            locationsNumber = Integer.parseInt(locationsText);
+
+            
+            if (locationsNumber <= 0) {
+                JOptionPane.showMessageDialog(setLocationsFrame, 
+                                              "Введите положительное число для количества локаций.", 
+                                              "Ошибка ввода", 
+                                              JOptionPane.ERROR_MESSAGE);
+                setLocationsFrame.setVisible(true); 
+                return; 
+            }
+
+        } catch (NumberFormatException ex) {
+            
+            JOptionPane.showMessageDialog(setLocationsFrame, 
+                                          "Введите корректное целое число для количества локаций.", 
+                                          "Ошибка ввода", 
+                                          JOptionPane.ERROR_MESSAGE);
+            setLocationsFrame.setVisible(true); 
+            return; 
+        }
         locationLabel.setText("Текущая локация: " + game.fight.location.getCurrentLocation() + "/" + locationsNumber);
         game.fight.setPlayer(game.newPlayer(mediator, items));
         game.fight.location.setEnemiesAtLocation(game.fight.getPlayer().getLevel(), game.fight.location.getCurrentLocation());
