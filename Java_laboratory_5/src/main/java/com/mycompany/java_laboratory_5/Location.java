@@ -120,7 +120,7 @@ public class Location {
             return currentEnemiesList.get(currentEnemyNumber - 1);
         } else {
             enemy = fullEnemiesList[4]; // Boss
-            enemy.setIcon("SecretBoss.jpg");
+            enemy.setIcon("BOSS.jpg");
 
             //Усиление характеристик босса в зависимости от локации
             double healthMultiplier = 1 + 0.2 * (currentLocation - 1);

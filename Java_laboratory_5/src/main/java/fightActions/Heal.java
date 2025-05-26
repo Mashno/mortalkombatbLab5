@@ -25,7 +25,7 @@ public class Heal extends FightAction {
             case "Hit" -> {
                 if ("Усач".equals(fighter1.getName())) {
                     // Босс получает двойной урон при атаке игрока во время регенерации
-                    int doubleDamage = fighter2.getDamage() * 2;
+                    int doubleDamage = fighter2.getDamage()/2;
                     fighter1.setHealth(fighter1.getHealth() - doubleDamage);
                 } else {
                     // Игрок лечится, но получает урон

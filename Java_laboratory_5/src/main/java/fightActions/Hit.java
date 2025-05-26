@@ -51,7 +51,7 @@ public class Hit extends FightAction {
 
             case "Heal" -> {
                 // Удвоенный урон по цели
-                fighter2.setHealth(fighter2.getHealth() - baseDamage * 2);
+                fighter2.setHealth(fighter2.getHealth() - baseDamage );
             }
         }
     }

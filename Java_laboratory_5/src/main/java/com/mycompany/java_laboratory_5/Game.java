@@ -42,7 +42,7 @@ public class Game {
     }
 
     public Player newPlayer(Mediator mediator, Item[] items) {
-        Player player = new Player(0, 150, 20);
+        Player player = new Player(0, 1150, 20);
         mediator.setHealthBar(player);
         mediator.setPlayerMaxHealthBar(player);
         player.setItems(items);
