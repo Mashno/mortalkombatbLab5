@@ -226,7 +226,7 @@ public class Mediator {
     
     public void setWeakenedLabel(Fighter fighter, boolean isActive) {
         if (isActive) {
-            System.out.println(fighter.getName() + " is weakened!");
+           stunLabel.setText(fighter.getName() + " is weakened!");
         } else {
             System.out.println(fighter.getName() + " no longer weakened.");
         }

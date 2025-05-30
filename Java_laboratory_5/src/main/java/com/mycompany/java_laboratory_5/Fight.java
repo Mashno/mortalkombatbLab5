@@ -74,7 +74,7 @@ public class Fight {
             mediator.setDebuffLabel(player, false);
         }
         if (player.isDebuffed()) {
-            mediator.setDebuffLabel(enemy, true);
+            mediator.setDebuffLabel(player, true);
             player.loseDebuffTurn();
         }
         
@@ -99,41 +99,6 @@ public class Fight {
         GameActions action = new GameActions();
         FightAction enemyAction = action.chooseEnemyAction(enemy, new ArrayList<>(actionsList));
 
-//        // Проверка оглушения игрока
-//        if (player.isStunned()) {
-//            mediator.setStunLabel(player);
-//            player.setStunned(false); // сброс оглушения после пропуска хода
-//            // Пропускаем ход игрока, но враг всё ещё может атаковать
-//            if (enemy.getHealth() > 0) {
-//                enemyMove(actionsList.get(1), enemyAction); // Враг атакует
-//            }
-//            return;
-//        }
-//
-//        // Проверка оглушения врага
-//        if (enemy.isStunned()) {
-//            mediator.setStunLabel(enemy);
-//            enemy.setStunned(false); // сброс оглушения после пропуска хода
-//            // Пропускаем ход врага, игрок может атаковать
-//            switch (a) {
-//                case 0 -> { // Атака
-//                    playerMove(enemyAction, actionsList.get(1)); // Hit
-//                    player.setLastAction("Hit");
-//                    player.setLastDamageGiven(player.getDamage());
-//                }
-//                case 1 -> { // Защита
-//                    playerMove(enemyAction, actionsList.get(0)); // Block
-//                    player.setLastAction("Block");
-//                    player.setLastDamageGiven(0);
-//                }
-//                case 2 -> { // Дебафф
-//                    playerMove(enemyAction, actionsList.get(2)); // Debuff
-//                    player.setLastAction("Debuff");
-//                    player.setLastDamageGiven(0);
-//                }
-//            }
-//            return;
-//        }
 
         // Обычная логика боя, если никто не оглушён
         switch (a) {
