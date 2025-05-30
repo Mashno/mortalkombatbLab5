@@ -18,6 +18,7 @@ public class Location {
     ArrayList<Enemy> currentEnemiesList = new ArrayList<>();
     Enemy[] fullEnemiesList = null;
     public int locationSize;
+    public int totalLocations = 1;
 
     public void setFullEnemiesList(Enemy[] list) {
         fullEnemiesList = list;
@@ -90,7 +91,13 @@ public class Location {
             currentEnemiesList.add(enemy);
         }
     }
+    public void setTotalLocations(int total) {
+        this.totalLocations = total;
+    }
 
+    public int getTotalLocations() {
+        return totalLocations;
+    }
 
     public void resetLocation(boolean a, int playerLevel) {
         if (a) {

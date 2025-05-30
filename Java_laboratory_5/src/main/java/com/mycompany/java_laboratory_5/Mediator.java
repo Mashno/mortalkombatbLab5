@@ -165,8 +165,10 @@ public class Mediator {
     }
 
     public void setEndFightDialog() {
+        
         endFightDialog.setVisible(true);
         endFightDialog.setBounds(300, 150, 700, 600);
+        fightFrame.setVisible(false);
     }
 
     public void setRoundEndText(String text) {

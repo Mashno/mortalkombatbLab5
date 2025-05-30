@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 public class GUI extends javax.swing.JFrame {
@@ -465,7 +466,7 @@ public class GUI extends javax.swing.JFrame {
         endRoundLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         endRoundLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        nextRoundButton.setBackground(new java.awt.Color(114, 218, 142));
+        nextRoundButton.setBackground(new java.awt.Color(255, 0, 0));
         nextRoundButton.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         nextRoundButton.setText("Дальше");
         nextRoundButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1109,7 +1110,7 @@ public class GUI extends javax.swing.JFrame {
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         setLocationsFrame.setVisible(true);
         setLocationsFrame.setBounds(300, 200, 430, 350);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_startButtonActionPerformed
 
     private void attackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_attackButtonActionPerformed
@@ -1121,7 +1122,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_blockButtonActionPerformed
 
     private void nextRoundButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextRoundButtonActionPerformed
-        locationLabel.setText("Текущая локация: " + game.fight.location.getCurrentLocation() + "/" + locationsNumber);
+        fightFrame.setVisible(true);
+        locationLabel.setText("Текущая локация: " + game.fight.location.getCurrentLocation() + "/" + game.fight.location.getTotalLocations());
         if ((game.fight.location.getCurrentEnemyNumber() + 1) <= game.fight.location.getEnemiesAtLocation().size()) {
             enemyNumberLabel.setText("Номер противника: " + (game.fight.location.getCurrentEnemyNumber() + 1) + "/" + game.fight.location.getEnemiesAtLocation().size());
         } else {
@@ -1210,6 +1212,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void startWithLocationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startWithLocationsButtonActionPerformed
         setLocationsFrame.setVisible(false);
+        
         String locationsText = setLocationsField.getText();
         int locationsNumber;
 
@@ -1235,8 +1238,8 @@ public class GUI extends javax.swing.JFrame {
             setLocationsFrame.setVisible(true); 
             return; 
         }
-        
-        locationLabel.setText("Текущая локация: " + game.fight.location.getCurrentLocation() + "/" + locationsNumber);
+        game.fight.location.setTotalLocations(locationsNumber);
+        locationLabel.setText("Текущая локация: " + game.fight.location.getCurrentLocation() + "/" + game.fight.location.getTotalLocations());
         game.fight.setPlayer(game.newPlayer(mediator, items));
         game.fight.location.setEnemiesAtLocation(game.fight.getPlayer().getLevel(), game.fight.location.getCurrentLocation());
         fightFrame.setVisible(true);

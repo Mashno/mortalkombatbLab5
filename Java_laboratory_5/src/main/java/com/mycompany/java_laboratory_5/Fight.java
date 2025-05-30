@@ -146,7 +146,7 @@ public class Fight {
             mediator.revive(player, player.getItems());
         }
         if (player.getHealth() <= 0 | enemy.getHealth() <= 0) {
-            if (location.getCurrentLocation() == locationsNumber & "Усач".equals(enemy.getName())) {
+            if (location.getCurrentLocation() == location.getTotalLocations() & "Усач".equals(enemy.getName())) {
                 location.resetLocation(false, 1);
                 endFinalRound(results, enemiesList);
             } else {
@@ -180,8 +180,8 @@ public class Fight {
     public void reset(Enemy[] enemiesList) {
         GameActions action = new GameActions();
         player.setDamage(20);
-        player.setHealth(150);
-        player.setMaxHealth(150);
+        player.setHealth(10);
+        player.setMaxHealth(10);
         action.resetEnemies(enemiesList);
         player.setLevel(0);
         player.setPoints(0);
