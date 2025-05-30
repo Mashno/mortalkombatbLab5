@@ -26,7 +26,7 @@ public class GUI extends javax.swing.JFrame {
         game.writeToTable(recordsTable);
         game.setEnemies();
         game.fight.location.setFullEnemiesList(game.getEnemies());
-        playerIconLabel.setIcon(new ImageIcon("Игрокjpg.jpg"));
+        playerIconLabel.setIcon(new ImageIcon("Игрокjpg (1).png"));
         attributesGroup.add(healthButton);
         attributesGroup.add(damageButton);
         itemsGroup.add(firstItemButton);
