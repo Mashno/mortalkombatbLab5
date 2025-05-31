@@ -97,6 +97,13 @@ public class Mediator {
         this.stunLabel = stunLabel;
     }
 
+    public void setWeakenedLabel(Fighter fighter, boolean isActive) {
+        if (isActive) {
+           stunLabel.setText(fighter.getName() + " is weakened!");
+        } else {
+            stunLabel.setText(fighter.getName() + " no longer weakened.");
+        }
+    }
     public void setActionLabels(Fighter enemy, Fighter player, FightAction enemyAction, FightAction playerAction) {
         playerActionLabel.setText(player.getName() + " uses " + playerAction.getType());
         enemyActionLabel.setText(enemy.getName() + " use " + enemyAction.getType());
@@ -226,11 +233,4 @@ public class Mediator {
         }
     }
     
-    public void setWeakenedLabel(Fighter fighter, boolean isActive) {
-        if (isActive) {
-           stunLabel.setText(fighter.getName() + " is weakened!");
-        } else {
-            stunLabel.setText(fighter.getName() + " no longer weakened.");
-        }
-    }
 }
