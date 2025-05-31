@@ -40,7 +40,7 @@ public class GameActions {
                 else return list.get(1); // Hit
             }
             case BOSS -> {
-                // Босс: 40% Hit, 20% Block, 20% Debuff, 20% Heal
+                
                 if (choice < 0.4) return list.get(1); // Hit
                 else if (choice < 0.6) return list.get(0); // Block
                 else return list.get(3); // Heal

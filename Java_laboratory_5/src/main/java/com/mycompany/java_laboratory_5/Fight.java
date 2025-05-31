@@ -100,26 +100,26 @@ public class Fight {
         FightAction enemyAction = action.chooseEnemyAction(enemy, new ArrayList<>(actionsList));
 
 
-        // Обычная логика боя, если никто не оглушён
+        
         switch (a) {
-            case 0 -> { // Атака
-                playerMove(enemyAction, actionsList.get(1)); // Hit
+            case 0 -> { //атака
+                playerMove(enemyAction, actionsList.get(1)); //hit
                 if (enemy.getHealth() > 0) {
                     enemyMove(actionsList.get(1), enemyAction);
                 }
                 player.setLastAction("Hit");
                 player.setLastDamageGiven(player.getDamage());
             }
-            case 1 -> { // Защита
-                playerMove(enemyAction, actionsList.get(0)); // Block
+            case 1 -> { //защита
+                playerMove(enemyAction, actionsList.get(0)); //block
                 if (enemy.getHealth() > 0) {
                     enemyMove(actionsList.get(0), enemyAction);
                 }
                 player.setLastAction("Block");
                 player.setLastDamageGiven(0);
             }
-            case 2 -> { // Дебафф
-                playerMove(enemyAction, actionsList.get(2)); // Debuff
+            case 2 -> { //дебафф
+                playerMove(enemyAction, actionsList.get(2)); //debuff
                 if (enemy.getHealth() > 0) {
                     enemyMove(actionsList.get(2), enemyAction);
                 }
@@ -128,7 +128,7 @@ public class Fight {
             }
         }
 
-        // Обновление информации на экране
+        //обновление информации на экране
         mediator.setRoundTexts(player, enemy);
         checkDebuff();
         mediator.setStunLabel(player);
@@ -180,8 +180,8 @@ public class Fight {
     public void reset(Enemy[] enemiesList) {
         GameActions action = new GameActions();
         player.setDamage(20);
-        player.setHealth(10);
-        player.setMaxHealth(10);
+        player.setHealth(150);
+        player.setMaxHealth(150);
         action.resetEnemies(enemiesList);
         player.setLevel(0);
         player.setPoints(0);

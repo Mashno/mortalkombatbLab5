@@ -134,9 +134,9 @@ public class GUI extends javax.swing.JFrame {
         startButton = new javax.swing.JButton();
         seeResultsButton = new javax.swing.JButton();
 
-        fightPanel.setBackground(new java.awt.Color(255, 255, 255));
+        fightPanel.setBackground(new java.awt.Color(204, 204, 255));
 
-        attackButton.setBackground(new java.awt.Color(153, 0, 0));
+        attackButton.setBackground(new java.awt.Color(255, 102, 102));
         attackButton.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         attackButton.setText("Атаковать");
         attackButton.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +243,7 @@ public class GUI extends javax.swing.JFrame {
         stunLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 16)); // NOI18N
         stunLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        itemsButton.setBackground(new java.awt.Color(153, 153, 255));
+        itemsButton.setBackground(new java.awt.Color(153, 204, 255));
         itemsButton.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         itemsButton.setText("Предметы");
         itemsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +260,7 @@ public class GUI extends javax.swing.JFrame {
         playerActionLabel.setForeground(new java.awt.Color(204, 0, 0));
         playerActionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        debuffButton.setBackground(new java.awt.Color(0, 255, 51));
+        debuffButton.setBackground(new java.awt.Color(102, 255, 0));
         debuffButton.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         debuffButton.setText("Дебаффнуть");
         debuffButton.addActionListener(new java.awt.event.ActionListener() {
@@ -458,7 +458,7 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(fightPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        endFightPanel.setBackground(new java.awt.Color(179, 226, 217));
+        endFightPanel.setBackground(new java.awt.Color(153, 153, 255));
 
         endRoundLabel.setBackground(new java.awt.Color(204, 204, 204));
         endRoundLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 42)); // NOI18N
@@ -466,7 +466,7 @@ public class GUI extends javax.swing.JFrame {
         endRoundLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         endRoundLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        nextRoundButton.setBackground(new java.awt.Color(255, 0, 0));
+        nextRoundButton.setBackground(new java.awt.Color(255, 153, 153));
         nextRoundButton.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         nextRoundButton.setText("Дальше");
         nextRoundButton.addActionListener(new java.awt.event.ActionListener() {
@@ -483,27 +483,24 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(endFightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(endFightPanelLayout.createSequentialGroup()
                         .addGap(156, 156, 156)
-                        .addComponent(GIFLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(GIFLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nextRoundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(endFightPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(endRoundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(nextRoundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                        .addComponent(endRoundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         endFightPanelLayout.setVerticalGroup(
             endFightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(endFightPanelLayout.createSequentialGroup()
-                .addGroup(endFightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(28, 28, 28)
+                .addGroup(endFightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nextRoundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(endFightPanelLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
                         .addComponent(endRoundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, endFightPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(nextRoundButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)))
-                .addComponent(GIFLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(GIFLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -524,7 +521,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        endGamePanel.setBackground(new java.awt.Color(255, 204, 255));
+        endGamePanel.setBackground(new java.awt.Color(153, 153, 255));
 
         victoryLabel.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
         victoryLabel.setForeground(new java.awt.Color(255, 0, 0));
@@ -547,7 +544,7 @@ public class GUI extends javax.swing.JFrame {
         enterNameLabelBottom.setForeground(new java.awt.Color(102, 102, 102));
         enterNameLabelBottom.setText("результата в таблицу рекордов");
 
-        endGameButton.setBackground(new java.awt.Color(153, 153, 255));
+        endGameButton.setBackground(new java.awt.Color(255, 102, 102));
         endGameButton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         endGameButton.setForeground(new java.awt.Color(51, 51, 51));
         endGameButton.setText("Закончить игру");
@@ -701,7 +698,7 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(recordsTablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        endGameWithoutLadderPanel.setBackground(new java.awt.Color(255, 204, 255));
+        endGameWithoutLadderPanel.setBackground(new java.awt.Color(153, 153, 255));
 
         endGameWithoutLadderTitlleLabel.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
         endGameWithoutLadderTitlleLabel.setForeground(new java.awt.Color(255, 0, 0));
@@ -712,7 +709,7 @@ public class GUI extends javax.swing.JFrame {
         notInLadderLabel.setForeground(new java.awt.Color(102, 102, 102));
         notInLadderLabel.setText("К сожалению, Ваш результат не попал в топ 10");
 
-        endGameWithoutLadderButton.setBackground(new java.awt.Color(153, 153, 255));
+        endGameWithoutLadderButton.setBackground(new java.awt.Color(255, 153, 153));
         endGameWithoutLadderButton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         endGameWithoutLadderButton.setForeground(new java.awt.Color(51, 51, 51));
         endGameWithoutLadderButton.setText("Закончить игру");
@@ -762,14 +759,14 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(endGameWithoutLadderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        itemsBagPanel.setBackground(new java.awt.Color(190, 182, 135));
+        itemsBagPanel.setBackground(new java.awt.Color(153, 153, 255));
 
         itemsBagLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 16)); // NOI18N
         itemsBagLabel.setForeground(new java.awt.Color(51, 51, 51));
         itemsBagLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemsBagLabel.setText("Мешок предметов");
 
-        firstItemButton.setBackground(new java.awt.Color(190, 182, 135));
+        firstItemButton.setBackground(new java.awt.Color(153, 153, 255));
         firstItemButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         firstItemButton.setText("Малое зелье лечение, 0 шт");
         firstItemButton.addActionListener(new java.awt.event.ActionListener() {
@@ -778,7 +775,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        secondItemButton.setBackground(new java.awt.Color(190, 182, 135));
+        secondItemButton.setBackground(new java.awt.Color(153, 153, 255));
         secondItemButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         secondItemButton.setText("Большое зелье лечение, 0 шт");
         secondItemButton.addActionListener(new java.awt.event.ActionListener() {
@@ -787,7 +784,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        thirdItemButton.setBackground(new java.awt.Color(190, 182, 135));
+        thirdItemButton.setBackground(new java.awt.Color(153, 153, 255));
         thirdItemButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         thirdItemButton.setText("Крест возрождения, 0 шт");
 
@@ -845,7 +842,7 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(itemsBagPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        cantUseItemPanel.setBackground(new java.awt.Color(243, 120, 120));
+        cantUseItemPanel.setBackground(new java.awt.Color(153, 153, 255));
 
         cantUseItemLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         cantUseItemLabel.setForeground(new java.awt.Color(51, 51, 51));
@@ -857,7 +854,7 @@ public class GUI extends javax.swing.JFrame {
         unavailableItemLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         unavailableItemLabel.setText("этот предмет");
 
-        closeCantUseItemButton.setBackground(new java.awt.Color(204, 204, 204));
+        closeCantUseItemButton.setBackground(new java.awt.Color(255, 102, 102));
         closeCantUseItemButton.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         closeCantUseItemButton.setForeground(new java.awt.Color(51, 51, 51));
         closeCantUseItemButton.setText("ОК");
@@ -908,6 +905,8 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(cantUseItemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        setLocationsPanel.setBackground(new java.awt.Color(153, 153, 255));
+
         setLocationsLabel.setText("Введите количество локаций, которое хотите пройти");
 
         setLocationsField.addActionListener(new java.awt.event.ActionListener() {
@@ -916,6 +915,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        startWithLocationsButton.setBackground(new java.awt.Color(255, 153, 153));
         startWithLocationsButton.setText("Начать игру");
         startWithLocationsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -967,6 +967,8 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        attributePanel.setBackground(new java.awt.Color(153, 153, 255));
+
         levelUpLabel.setText("Какой параметр улучшить?");
 
         healthButton.setText("Здоровье");
@@ -979,6 +981,7 @@ public class GUI extends javax.swing.JFrame {
         damageButton.setSelected(true);
         damageButton.setText("Урон");
 
+        chooseAttributeButton.setBackground(new java.awt.Color(255, 0, 255));
         chooseAttributeButton.setText("ОК");
         chooseAttributeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1039,13 +1042,14 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel.setBackground(new java.awt.Color(255, 255, 255));
+        panel.setBackground(new java.awt.Color(153, 153, 255));
 
         mkLabel.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         mkLabel.setForeground(new java.awt.Color(204, 204, 0));
         mkLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mkLabel.setText("Mortal Kombat");
 
+        startButton.setBackground(new java.awt.Color(204, 204, 0));
         startButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         startButton.setText("Начать новую игру");
         startButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1054,6 +1058,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        seeResultsButton.setBackground(new java.awt.Color(204, 204, 0));
         seeResultsButton.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         seeResultsButton.setText("Посмотреть таблицу \nрезультатов");
         seeResultsButton.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);

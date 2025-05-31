@@ -24,11 +24,11 @@ public class Heal extends FightAction {
         switch (fighter2ActionType) {
             case "Hit" -> {
                 if ("Усач".equals(fighter1.getName())) {
-                    // Босс получает двойной урон при атаке игрока во время регенерации
+                    //босс получает двойной урон при атаке игрока во время регенерации
                     int doubleDamage = fighter2.getDamage()/2;
                     fighter1.setHealth(fighter1.getHealth() - doubleDamage);
                 } else {
-                    // Игрок лечится, но получает урон
+                    //игрок лечится, но получает урон
                     fighter1.setHealth((int) (fighter1.getMaxHealth() * 0.25) + fighter1.getHealth());
                     fighter1.setHealth(fighter1.getHealth() - fighter2.getDamage());
                 }
@@ -36,7 +36,7 @@ public class Heal extends FightAction {
 
             case "Block" -> {
                 if ("Усач".equals(fighter1.getName())) {
-                    // Босс восстанавливает 50% от недостающего здоровья
+                    //босс восстанавливает 50% от недостающего здоровья
                     int missingHealth = fighter1.getMaxHealth() - fighter1.getHealth();
                     fighter1.setHealth(fighter1.getHealth() + missingHealth / 2);
                 } else {
@@ -45,11 +45,11 @@ public class Heal extends FightAction {
             }
 
             case "Debuff" -> {
-                // Лечение блокирует дебафф
+                //лечение блокирует дебафф
             }
 
             case "Heal" -> {
-                // Оба лечатся — усиленный эффект
+                //оба лечатся — усиленный эффект
                 fighter1.setHealth((fighter1.getMaxHealth() - fighter1.getHealth()) + fighter1.getHealth());
             }
         }

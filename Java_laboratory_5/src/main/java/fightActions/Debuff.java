@@ -23,13 +23,13 @@ public class Debuff extends FightAction {
     public void realisation(Fighter fighter1, Fighter fighter2, String fighter2ActionType) {
         switch (fighter2ActionType) {
             case "Hit" -> {
-                // Дебафф срывается, атакующий наносит +15% урона
+                //дебафф срывается, атакующий наносит +15% урона
                 int bonusDamage = (int) (fighter2.getDamage() * 1.15);
                 fighter1.setHealth(fighter1.getHealth() - bonusDamage);
             }
 
             case "Block" -> {
-                // 75% шанс наложить дебафф на n ходов (n = уровень fighter1)
+                //75% шанс наложить дебафф на n ходов (n = уровень fighter1)
                 if (Math.random() < 0.75) {
                     int turns = Math.max(1, fighter1.getLevel());
                     fighter2.setMovesWithDebuff(turns);
@@ -38,7 +38,7 @@ public class Debuff extends FightAction {
             }
 
             case "Debuff" -> {
-                // Оба дебаффят — 50% шанс наложения на второго
+                //оба дебаффят — 50% шанс наложения на второго
                 if (Math.random() < 0.5) {
                     int turns = Math.max(1, fighter1.getLevel());
                     fighter2.setMovesWithDebuff(turns);
@@ -47,7 +47,7 @@ public class Debuff extends FightAction {
             }
 
             case "Heal" -> {
-                // Ничего не происходит
+                //ничего не происходит
             }
         }
     }

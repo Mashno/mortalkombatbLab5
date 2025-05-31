@@ -32,7 +32,7 @@ public class Block extends FightAction {
             }
 
             case "Debuff" -> {
-                //При блоке против дебафа - шанс получить дебаф
+                //при блоке против дебафа - шанс получить дебаф
                 if (Math.random() < 0.75) {
                     int turns = Math.max(1, fighter2.getLevel());
                     fighter1.setMovesWithDebuff(turns); // дебаф применяется к первому бойцу (игроку)
@@ -41,7 +41,7 @@ public class Block extends FightAction {
             }
 
             case "Heal" -> {
-                // ничего не происходит
+                //ничего не происходит
             }
         }
     }

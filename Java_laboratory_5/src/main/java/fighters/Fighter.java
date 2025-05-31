@@ -14,7 +14,7 @@ public abstract class Fighter {
     private int damage;
     private ImageIcon icon;
     private int movesWithDebuff;
-    private boolean isStunned = false;//добавление оглушения
+    private boolean isStunned = false;
     private boolean isWeakened = false;
     private int weakenDuration = 0;
     
